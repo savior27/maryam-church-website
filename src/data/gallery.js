@@ -4,6 +4,8 @@
  * Photography collection with full English and Amharic localizations.
  */
 
+import churchPhoto1 from '../images/photo_2026-10-24_21-55-15.jpg';
+
 export const galleryCategories = [
   'All',
   'Church Building',
@@ -15,7 +17,7 @@ export const galleryCategories = [
 export const galleryItems = [
   {
     id: 'gallery-1',
-    src: 'src/images/photo_2026-10-24_21-55-15.jpg',
+    src: churchPhoto1,
     alt: 'Historic rock-hewn Ethiopian Orthodox church architecture and ancient stone sanctuary',
     altAmharic: 'የታሪካዊ የኢትዮጵያ ኦርቶዶክስ ተዋሕዶ ውቅር አብያተ ክርስቲያናት ጥንታዊ ቅዱስ ሕንፃ',
     category: 'Church Building',
