@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
-import { ChevronRight, Heart, HandHeart, AlertCircle, ArrowRight, ShieldCheck } from 'lucide-react';
+import { ChevronRight, Heart, HandHeart, AlertCircle, ArrowRight, ShieldCheck, Church } from 'lucide-react';
 import { useDocumentTitle } from '../hooks';
 import { useLanguage } from '../i18n/LanguageContext';
 import SectionHeading from '../components/SectionHeading';
 import DonationCard from '../components/DonationCard';
+import churchBuildingImage from '../images/photo_2026-10-24_21-55-15.jpg';
 
 /**
  * Donations & Church Support Page
@@ -169,6 +170,115 @@ export default function Donations() {
                 ? 'ልዑል እግዚአብሔር ስለ መልካም አሳብዎና በጎ ልገሳዎ አብዝቶ ይባርክዎ።'
                 : 'May the Almighty God multiply your blessings, peace, and health for supporting His holy altar and community.')}
           </p>
+        </section>
+
+        {/* =========================================================================
+            CHURCH BUILDING FUNDRAISING SECTION
+            ========================================================================= */}
+        <section
+          aria-labelledby="church-building-heading"
+          className="relative bg-charcoal rounded-2xl shadow-xl overflow-hidden max-w-3xl mx-auto"
+        >
+          {/* Church Photo */}
+          <div className="relative h-56 sm:h-64 md:h-72 w-full overflow-hidden">
+            <img
+              src={churchBuildingImage}
+              alt={isAmharic
+                ? 'እየተገነባ ያለው የቅድስት ማርያም ቤተ ክርስቲያን'
+                : 'St. Mary Ethiopian Orthodox Tewahedo Church building'}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent" />
+
+            {/* Floating badge */}
+            <div className="absolute bottom-4 left-4 right-4 flex items-center gap-2">
+              <div className="w-9 h-9 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0">
+                <Church className="w-4.5 h-4.5 text-gold" aria-hidden="true" />
+              </div>
+              <span className="text-xs uppercase tracking-widest text-gold font-semibold drop-shadow">
+                {isAmharic ? 'የቤተ መቅደስ ግንባታ' : 'Church Building Project'}
+              </span>
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="px-6 sm:px-8 md:px-10 py-8 sm:py-10 space-y-6">
+            {/* Heading */}
+            <div className="text-center">
+              <h3
+                id="church-building-heading"
+                className="font-heading text-2xl sm:text-3xl font-bold text-white tracking-tight mb-3"
+              >
+                {isAmharic
+                  ? 'የእግዚአብሔርን ቤት ለማጠናቀቅ ይርዱን'
+                  : 'Help Us Complete the House of God'}
+              </h3>
+              <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-gold to-transparent rounded-full mx-auto" aria-hidden="true" />
+            </div>
+
+            {/* Scripture */}
+            <blockquote className="text-center px-4">
+              <p className="text-gold/90 italic text-sm sm:text-base font-serif leading-relaxed">
+                {isAmharic
+                  ? '«የሰማዩ አምላክ ያከናውንልናል፤ እኛ ባሪያዎቹም ተነሥተን እንሠራለን።»'
+                  : '"The God of heaven will give us success. We his servants will start rebuilding."'}
+              </p>
+              <cite className="block mt-1.5 text-xs text-gold/60 font-semibold not-italic tracking-wide">
+                {isAmharic ? '— ነህምያ ፪፥፳' : '— Nehemiah 2:20'}
+              </cite>
+            </blockquote>
+
+            {/* Message */}
+            <div className="space-y-4 text-white/85 text-sm sm:text-base leading-relaxed">
+              <p>
+                {isAmharic
+                  ? 'በከታቤሮ፣ አጋሮ፣ ኢትዮጵያ የምትገኘው የተወደደችው የቅድስት ማርያም ኢትዮጵያ ኦርቶዶክስ ተዋሕዶ ቤተ ክርስቲያናችን አዲስ የአምልኮ ቤት በመገንባት ላይ ትገኛለች። በእግዚአብሔር ጸጋና በማኅበረሰባችን ቁርጠኝነት ግንባታው ተጀምሮ ቢራመድም ይህን ቅዱስ ስፍራ ለማጠናቀቅ ገና ብዙ ሥራ ይቀራል።'
+                  : 'Our beloved St. Mary Ethiopian Orthodox Tewahedo Church in Ketabero, Agaro, Ethiopia, is in the process of building a new house of worship. Through God\'s grace and the dedication of our community, construction has progressed, but work remains to complete this sacred place.'}
+              </p>
+              <p>
+                {isAmharic
+                  ? 'ምዕመናንን፣ ቤተሰቦችን፣ ወዳጆችንና ሁሉንም በጎ ፈቃደኞች ይህን ቅዱስ ሥራ ለማጠናቀቅ እንዲቀላቀሉን በፍቅር እንጋብዛለን።'
+                  : 'We warmly invite our faithful, families, friends, and all people of goodwill to join us in completing this holy work.'}
+              </p>
+              <p>
+                {isAmharic
+                  ? 'የእርስዎ ልገሳ ትልቅም ይሁን ትንሽ — መጪዎቹ ትውልዶች እግዚአብሔርን የሚያመልኩበት፣ መንፈሳዊ መመሪያ የሚያገኙበት፣ ቅዱሳት ምሥጢራትን የሚያከብሩበትና በእምነት የሚያድጉበትን ቅዱስ ስፍራ ለማጠናቀቅ ያግዛል።'
+                  : 'Your contribution, whether large or small, can help us complete a place where future generations can worship God, receive spiritual guidance, celebrate the Holy Sacraments, and grow in faith.'}
+              </p>
+              <p className="font-medium text-white">
+                {isAmharic
+                  ? 'በእምነት፣ በፍቅርና በልግስና ተባብረን የእግዚአብሔርን ቤት እናጠናቅቅ።'
+                  : 'Together, with faith, love, and generosity, we can complete the house of God.'}
+              </p>
+            </div>
+
+            {/* Decorative divider */}
+            <div className="w-12 h-0.5 bg-gold/40 rounded-full mx-auto" aria-hidden="true" />
+
+            {/* Closing statement */}
+            <p className="text-center text-gold font-heading text-sm sm:text-base font-semibold italic tracking-wide">
+              {isAmharic
+                ? 'በፍቅር ስጡ። በእምነት ገንቡ። ለመጪዎቹ ትውልዶች ቅርስ ተዉ።'
+                : 'Give with love. Build with faith. Leave a legacy for generations to come.'}
+            </p>
+
+            {/* CTA Button — links to Contact page */}
+            <div className="text-center pt-2">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2.5 bg-gold hover:bg-gold-dark text-white font-semibold rounded-full px-8 py-4 transition-all duration-300 shadow-lg hover:shadow-gold/30 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-charcoal text-sm sm:text-base"
+              >
+                <Heart className="w-4.5 h-4.5 fill-white/20" aria-hidden="true" />
+                <span>
+                  {isAmharic
+                    ? 'የቤተ ክርስቲያን ግንባታን ይደግፉ'
+                    : 'Support Our Church Building'}
+                </span>
+                <ArrowRight className="w-4 h-4" aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
         </section>
 
         {/* Other Methods */}
