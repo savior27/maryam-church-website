@@ -24,7 +24,7 @@ export default function Services() {
       <section className="relative h-64 md:h-80 flex items-center justify-center overflow-hidden bg-charcoal">
         {/* Background Image with Dark & Burgundy Overlay */}
         <div
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out scale-105"
+          className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out"
           style={{
             backgroundImage:
               "url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=1920')",

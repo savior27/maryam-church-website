@@ -48,7 +48,7 @@ export default function About() {
       >
         {/* Background Image with Dark & Burgundy Overlay */}
         <div
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out scale-105"
+          className="absolute inset-0 bg-cover bg-center sm:bg-center bg-[center_top] transition-transform duration-700 ease-out"
           style={{
             backgroundImage:
               "url('https://images.unsplash.com/photo-1548407260-da850faa41e8?w=1920&q=80')",
@@ -115,7 +115,7 @@ export default function About() {
               <img
                 src="https://images.unsplash.com/photo-1473177104440-ffee2f376098?w=800"
                 alt="Ethiopian Orthodox Church ancient cross and holy sanctuary"
-                className="w-full h-[400px] md:h-[480px] object-cover rounded-2xl shadow-xl border-4 border-white"
+                className="w-full h-auto object-contain rounded-2xl shadow-xl border-4 border-white"
                 loading="lazy"
               />
 
@@ -356,7 +356,7 @@ export default function About() {
         >
           {/* Background Image with Rich Overlay */}
           <div
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out scale-105"
+            className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out"
             style={{
               backgroundImage:
                 "url('https://images.unsplash.com/photo-1548407260-da850faa41e8?w=1600')",

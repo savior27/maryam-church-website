@@ -46,8 +46,8 @@ export default function NewsCard({
       <div
         className={`relative overflow-hidden bg-ivory ${
           featured
-            ? 'md:col-span-7 aspect-video md:aspect-auto min-h-[260px]'
-            : 'aspect-video w-full'
+            ? 'md:col-span-7 aspect-[4/3] sm:aspect-video md:aspect-auto md:min-h-[260px]'
+            : 'aspect-[4/3] sm:aspect-video w-full'
         }`}
       >
         {image ? (

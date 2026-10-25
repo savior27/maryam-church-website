@@ -177,3 +177,24 @@ h1, h2, h3, h4, h5, h6 {
 .lightbox-overlay {
   backdrop-filter: blur(4px);
 }
+
+/* ============================================
+   Responsive Image Helpers
+   ============================================ */
+/* Prevent horizontal overflow from any element */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Ensure all images are responsive by default */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Hero background images: show more of the building on small screens */
+@media (max-width: 640px) {
+  .hero-bg-responsive {
+    background-position: center top !important;
+  }
+}

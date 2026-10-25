@@ -40,7 +40,7 @@ export default function Donations() {
       {/* Hero Banner */}
       <section className="relative h-64 md:h-80 w-full overflow-hidden flex items-center justify-center bg-charcoal">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-40 transform scale-105 transition-transform duration-1000"
+          className="absolute inset-0 bg-cover bg-center opacity-40 transform transition-transform duration-1000"
           style={{
             backgroundImage:
               "url('https://images.unsplash.com/photo-1548407260-da850faa41e8?w=1600&auto=format&fit=crop&q=80')",

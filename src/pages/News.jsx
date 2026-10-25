@@ -27,7 +27,7 @@ export default function News() {
       {/* Hero Banner */}
       <section className="relative h-64 md:h-80 w-full overflow-hidden flex items-center justify-center bg-charcoal">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-40 transform scale-105 transition-transform duration-1000"
+          className="absolute inset-0 bg-cover bg-center opacity-40 transform transition-transform duration-1000"
           style={{
             backgroundImage:
               "url('https://images.unsplash.com/photo-1548407260-da850faa41e8?w=1600&auto=format&fit=crop&q=80')",
@@ -83,7 +83,7 @@ export default function News() {
             <article className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gold/20 hover:shadow-xl transition-all duration-300">
               <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
                 {/* Image (Left on desktop) */}
-                <div className="lg:col-span-7 relative overflow-hidden aspect-video lg:aspect-auto min-h-[300px] md:min-h-[380px] bg-ivory">
+                <div className="lg:col-span-7 relative overflow-hidden aspect-[4/3] sm:aspect-video lg:aspect-auto lg:min-h-[380px] bg-ivory">
                   <img
                     src={featuredArticle.image}
                     alt={isAmharic && featuredArticle.titleAmharic ? featuredArticle.titleAmharic : featuredArticle.title}

@@ -136,7 +136,7 @@ export default function NewsDetail() {
             <img
               src={article.image}
               alt={displayTitle}
-              className="w-full h-auto max-h-[520px] object-cover"
+              className="w-full h-auto object-contain"
               loading="eager"
             />
           </div>
