@@ -15,7 +15,7 @@ export const galleryCategories = [
 export const galleryItems = [
   {
     id: 'gallery-1',
-    src: 'https://images.unsplash.com/photo-1548407260-da850faa41e8?w=800',
+    src: 'src/images/photo_2026-10-24_21-55-15.jpg',
     alt: 'Historic rock-hewn Ethiopian Orthodox church architecture and ancient stone sanctuary',
     altAmharic: 'የታሪካዊ የኢትዮጵያ ኦርቶዶክስ ተዋሕዶ ውቅር አብያተ ክርስቲያናት ጥንታዊ ቅዱስ ሕንፃ',
     category: 'Church Building',

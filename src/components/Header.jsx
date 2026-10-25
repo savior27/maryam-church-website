@@ -86,7 +86,6 @@ const Header = () => {
     { path: '/about', label: t('nav.about') || 'About Us' },
     { path: '/services', label: t('nav.services') || 'Services' },
     { path: '/calendar', label: t('nav.calendar') || 'Calendar' },
-    { path: '/news', label: t('nav.news') || 'News' },
     { path: '/teachings', label: t('nav.teachings') || 'Teachings' },
     { path: '/gallery', label: t('nav.gallery') || 'Gallery' },
     { 
