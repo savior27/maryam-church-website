@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import churchImage from "../images/photo_2026-10-24_21-55-15.jpg";
 import {
   ArrowRight,
   CheckCircle,
@@ -151,7 +152,7 @@ export default function Home() {
                 />
 
                 <img
-                  src="src/images/photo_2026-10-24_21-55-15.jpg"
+                  src={churchImage}
                   alt="Ancient church cross and holy sanctuary"
                   className="w-full h-auto object-contain rounded-2xl shadow-xl border-4 border-white"
                   loading="lazy"
