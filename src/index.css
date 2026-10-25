@@ -1,0 +1,179 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+/* ============================================
+   Ethiopian Orthodox Church - Custom Styles
+   ============================================ */
+
+/* ============================================
+   Tailwind Theme Configuration
+   ============================================ */
+@theme {
+  --color-burgundy: #641E2B;
+  --color-burgundy-light: #7d2a38;
+  --color-burgundy-dark: #4a1620;
+  --color-gold: #C6A15B;
+  --color-gold-light: #d4b477;
+  --color-gold-dark: #a8873d;
+  --color-ivory: #FAF7F0;
+  --color-ivory-dark: #F0EBE0;
+  --color-charcoal: #242124;
+  --color-charcoal-light: #3a373a;
+  --color-green-deep: #244B3C;
+  --color-green-deep-light: #2f604d;
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', 'Noto Sans Ethiopic', sans-serif;
+  --font-ethiopic: 'Noto Sans Ethiopic', sans-serif;
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: 'Inter', 'Noto Sans Ethiopic', sans-serif;
+  color: #242124;
+  background-color: #FAF7F0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Ethiopic text styling */
+[lang="am"], .ethiopic-text {
+  font-family: 'Noto Sans Ethiopic', sans-serif;
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s ease-out forwards;
+}
+
+.animation-delay-100 { animation-delay: 0.1s; }
+.animation-delay-200 { animation-delay: 0.2s; }
+.animation-delay-300 { animation-delay: 0.3s; }
+.animation-delay-400 { animation-delay: 0.4s; }
+.animation-delay-500 { animation-delay: 0.5s; }
+
+/* ============================================
+   Gold Decorative Elements
+   ============================================ */
+.gold-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #C6A15B, transparent);
+}
+
+.gold-border-top {
+  border-top: 2px solid #C6A15B;
+}
+
+/* ============================================
+   Scrollbar Styling
+   ============================================ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF7F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C6A15B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8873d;
+}
+
+/* ============================================
+   Focus Styles for Accessibility
+   ============================================ */
+*:focus-visible {
+  outline: 2px solid #C6A15B;
+  outline-offset: 2px;
+}
+
+/* ============================================
+   Lightbox overlay
+   ============================================ */
+.lightbox-overlay {
+  backdrop-filter: blur(4px);
+}

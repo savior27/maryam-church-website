@@ -1,0 +1,140 @@
+/**
+ * Church Photo Gallery Data
+ * =========================
+ * Photography collection with full English and Amharic localizations.
+ */
+
+export const galleryCategories = [
+  'All',
+  'Church Building',
+  'Religious Celebrations',
+  'Community Activities',
+  'Church Events',
+];
+
+export const galleryItems = [
+  {
+    id: 'gallery-1',
+    src: 'https://images.unsplash.com/photo-1548407260-da850faa41e8?w=800',
+    alt: 'Historic rock-hewn Ethiopian Orthodox church architecture and ancient stone sanctuary',
+    altAmharic: 'የታሪካዊ የኢትዮጵያ ኦርቶዶክስ ተዋሕዶ ውቅር አብያተ ክርስቲያናት ጥንታዊ ቅዱስ ሕንፃ',
+    category: 'Church Building',
+    categoryAmharic: 'የቤተ መቅደስ ሕንፃ',
+    caption: 'Sacred architectural heritage of the Ethiopian Orthodox Tewahedo Church.',
+    captionAmharic: 'የኢትዮጵያ ኦርቶዶክስ ተዋሕዶ ቤተ ክርስቲያን ጥንታዊና ታሪካዊ ቅዱስ ሥነ ሕንፃ።',
+  },
+  {
+    id: 'gallery-2',
+    src: 'https://images.unsplash.com/photo-1574039677938-40965afbe4bb?w=800',
+    alt: 'Orthodox liturgical procession and ceremonial celebration with traditional vestments',
+    altAmharic: 'የካህናትና የዲያቆናት የቅዳሴና የበዓላት አከባበር በዓለማዊ ካባና በአልባሳት',
+    category: 'Religious Celebrations',
+    categoryAmharic: 'ሃይማኖታዊ በዓላት',
+    caption: 'Joyful liturgical procession with traditional sacred vestments and processional crosses.',
+    captionAmharic: 'ካህናትና ምዕመናን በቅዱስ ካባና በመስቀል ታጅበው የሚያካሂዱት የደመቀ በዓል ሥነ ሥርዓት።',
+  },
+  {
+    id: 'gallery-3',
+    src: 'https://images.unsplash.com/photo-1545296929-a41a5e2c0903?w=800',
+    alt: 'Parish community gathering and youth fellowship on church grounds',
+    altAmharic: 'የደብሩ ምዕመናንና ወጣቶች በቤተ ክርስቲያኑ ግቢ ውስጥ ያደረጉት የወንድማማችነት ጉባኤ',
+    category: 'Community Activities',
+    categoryAmharic: 'የማኅበረሰብ እንቅስቃሴዎች',
+    caption: 'Parish faithful and families gathering for community fellowship and mutual encouragement.',
+    captionAmharic: 'የደብሩ ቤተሰቦችና ምዕመናን ለመንፈሳዊ ፍቅርና ለአንድነት ያደረጉት የመተጋገዝ ጉባኤ።',
+  },
+  {
+    id: 'gallery-4',
+    src: 'https://images.unsplash.com/photo-1499988921418-b7df40ff03f9?w=800',
+    alt: 'Parish assembly attending annual feast day commemoration and spiritual symposium',
+    altAmharic: 'በዓመታዊው የንግሥ በዓል ላይ የተሰበሰበው የምዕመናን ታላቅ ጉባኤ',
+    category: 'Church Events',
+    categoryAmharic: 'የቤተ ክርስቲያን ዝግጅቶች',
+    caption: 'Annual feast gathering bringing together clergy, choir, and the parish congregation.',
+    captionAmharic: 'ካህናት፣ የሰንበት ት/ቤት ዘማርያንና ምዕመናን በአንድነት ያከበሩት ዓመታዊ በዓል።',
+  },
+  {
+    id: 'gallery-5',
+    src: 'https://images.unsplash.com/photo-1438032005730-c779502df39b?w=800',
+    alt: 'Sanctuary interior illuminated with prayer candles and sacred Orthodox iconography',
+    altAmharic: 'በጧፍና በቅዱሳት ሥዕላት ያጌጠው የቤተ መቅደስ ቅዱስ አውድማ',
+    category: 'Church Building',
+    categoryAmharic: 'የቤተ መቅደስ ሕንፃ',
+    caption: 'Reverent prayer atmosphere within the holy sanctuary illuminated by candlelight.',
+    captionAmharic: 'በጧፍ ብርሃን ደምቆ የታየው የቤተ መቅደሱ የጸሎትና የምስጋና መንፈሳዊ ድባብ።',
+  },
+  {
+    id: 'gallery-6',
+    src: 'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=800',
+    alt: 'Holy Scripture and prayer book open for sacred liturgical reading during service',
+    altAmharic: 'በቅዱስ ቅዳሴ ወቅት ለንባብ ክፍት የሆነው ቅዱስ ወንጌልና የጸሎት መጽሐፍ',
+    category: 'Religious Celebrations',
+    categoryAmharic: 'ሃይማኖታዊ በዓላት',
+    caption: 'Holy Gospel and traditional Ge\'ez liturgical readings during the Divine Liturgy.',
+    captionAmharic: 'በቅዱስ ቅዳሴ ጊዜ የሚነበበው የከበረው የወንጌል ንባብና የግዕዝ ጸሎት።',
+  },
+  {
+    id: 'gallery-7',
+    src: 'https://images.unsplash.com/photo-1507692049790-de58290a4334?w=800',
+    alt: 'Sunday school youth participating in choir rehearsal and traditional sacred hymns',
+    altAmharic: 'የሰንበት ት/ቤት ወጣቶች ያሬዳዊ ዜማና ዝማሬ ሲለማመዱ',
+    category: 'Community Activities',
+    categoryAmharic: 'የማኅበረሰብ እንቅስቃሴዎች',
+    caption: 'Sunday School youth learning traditional liturgical hymns and sacred chant (Zema).',
+    captionAmharic: 'የሰንበት ትምህርት ቤት ወጣቶች ያሬዳዊ ዜማንና መንፈሳዊ ዝማሬዎችን ሲያጠኑ።',
+  },
+  {
+    id: 'gallery-8',
+    src: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800',
+    alt: 'Evening prayer vigil illuminated by candle lights in deep spiritual devotion',
+    altAmharic: 'ምዕመናን በምሽት የጸሎት ሰዓት በጧፍ ብርሃን በጸሎት ሲተጉ',
+    category: 'Church Events',
+    categoryAmharic: 'የቤተ ክርስቲያን ዝግጅቶች',
+    caption: 'Devout congregation gathered for evening candlelight prayer vigil and adoration.',
+    captionAmharic: 'ምዕመናን በምሽት የዋዜማ ጸሎት ላይ በጧፍ ብርሃን ተሰብስበው አምላካቸውን ሲያመሰግኑ።',
+  },
+  {
+    id: 'gallery-9',
+    src: 'https://images.unsplash.com/photo-1473177104440-ffee2f376098?w=800',
+    alt: 'Majestic church dome and holy cross reaching toward heaven against the sky',
+    altAmharic: 'ወደ ሰማይ ከፍ ያለው የቤተ መቅደሱ ጉልላትና የከበረው ቅዱስ መስቀል',
+    category: 'Church Building',
+    categoryAmharic: 'የቤተ መቅደስ ሕንፃ',
+    caption: 'Orthodox church dome crowned with the holy cross reaching toward heaven.',
+    captionAmharic: 'የቤተ መቅደሱ ጉልላት በቅዱስ መስቀል አጊጦ ወደ ሰማይ ከፍ ብሎ ሲታይ።',
+  },
+  {
+    id: 'gallery-10',
+    src: 'https://images.unsplash.com/photo-1510034141778-a4d065653d92?w=800',
+    alt: 'Traditional church festival with ceremonial umbrellas and sacred processional banners',
+    altAmharic: 'በተቀደሰ ጃንጥላና በንግሥ ሰንደቅ የተዋበው የደብሩ መንፈሳዊ በዓል',
+    category: 'Religious Celebrations',
+    categoryAmharic: 'ሃይማኖታዊ በዓላት',
+    caption: 'Solemn festival celebration featuring vibrant ceremonial umbrellas and processional crosses.',
+    captionAmharic: 'በደመቁ የካህናት አያሌ ጃንጥላዎችና በመስቀል ቡራኬ የታጀበው የተቀደሰ በዓል።',
+  },
+  {
+    id: 'gallery-11',
+    src: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800',
+    alt: 'Parish community volunteers engaged in charitable community support and benevolence',
+    altAmharic: 'የደብሩ በጎ አድራጊዎች ለችግረኞች ድጋፍ ለማድረግ ሲያዘጋጁ',
+    category: 'Community Activities',
+    categoryAmharic: 'የማኅበረሰብ እንቅስቃሴዎች',
+    caption: 'Parish volunteers preparing charitable donations and benevolence outreach for those in need.',
+    captionAmharic: 'የደብሩ በጎ ፈቃደኞች ለተቸገሩ ወገኖች የሚደርሰውን የበጎ አድራጎት እርዳታ ሲያዘጋጁ።',
+  },
+  {
+    id: 'gallery-12',
+    src: 'https://images.unsplash.com/photo-1476234251651-f353703a034d?w=800',
+    alt: 'Clergy and congregation holding processional candles at early dawn service',
+    altAmharic: 'ካህናትና ምዕመናን በትንሣኤ ሌሊት ጧፍ አብርተው በደስታ ሲያከብሩ',
+    category: 'Church Events',
+    categoryAmharic: 'የቤተ ክርስቲያን ዝግጅቶች',
+    caption: 'Dawn Resurrection service (Tensae) procession celebrating divine victory and light.',
+    captionAmharic: 'የትንሣኤን ብርሃን ለማክበር ካህናትና ምዕመናን ጧፍ አብርተው በደስታ ሲያመሰግኑ።',
+  },
+];
+
+export const galleryImages = galleryItems;
+
+export default galleryItems;
