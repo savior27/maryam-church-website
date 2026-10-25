@@ -17,6 +17,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
+  const [isMobileLangOpen, setIsMobileLangOpen] = useState(false);
 
   const { t, currentLanguage, setLanguage, languages } = useLanguage();
   const location = useLocation();
@@ -46,6 +47,7 @@ const Header = () => {
     setPrevPathname(location.pathname);
     setIsMobileMenuOpen(false);
     setIsLangDropdownOpen(false);
+    setIsMobileLangOpen(false);
   }
 
   // Lock body scroll when mobile menu is active
@@ -280,7 +282,10 @@ const Header = () => {
             {/* Hamburger Button */}
             <button
               type="button"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              onClick={() => {
+                setIsMobileMenuOpen(!isMobileMenuOpen);
+                setIsMobileLangOpen(false);
+              }}
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-navigation-overlay"
               aria-label={isMobileMenuOpen ? 'Close Navigation Menu' : 'Open Navigation Menu'}
@@ -307,7 +312,7 @@ const Header = () => {
         role="dialog"
         aria-modal="true"
         aria-label="Mobile Navigation Menu"
-        className={`fixed inset-0 z-50 bg-[#242124] text-[#FAF7F0] lg:hidden flex flex-col justify-between transition-all duration-300 ease-in-out ${
+        className={`fixed inset-0 z-[60] bg-[#242124] text-[#FAF7F0] lg:hidden flex flex-col justify-between transition-all duration-300 ease-in-out ${
           isMobileMenuOpen
             ? 'opacity-100 pointer-events-auto translate-x-0'
             : 'opacity-0 pointer-events-none translate-x-full'
@@ -388,32 +393,47 @@ const Header = () => {
         {/* Mobile Drawer Footer: Language Selector & Blessings */}
         <div className="p-6 border-t border-[#3a373a] bg-[#242124]/90 space-y-4">
           <div>
-            <div className="text-xs uppercase font-semibold text-[#C6A15B] mb-2 flex items-center gap-1.5">
-              <Globe className="w-3.5 h-3.5" aria-hidden="true" />
-              <span>Language / ቋንቋ / Afaan</span>
-            </div>
-            <div className="grid grid-cols-3 gap-2">
-              {availableLanguages.map((lang) => {
-                const isSelected = currentLanguage === lang.code;
-                return (
-                  <button
-                    key={lang.code}
-                    type="button"
-                    onClick={() => {
-                      setLanguage(lang.code);
-                    }}
-                    className={`flex flex-col items-center justify-center py-2 px-2 rounded-lg text-xs font-semibold transition-all ${
-                      isSelected
-                        ? 'bg-[#641E2B] text-[#C6A15B] border border-[#C6A15B]'
-                        : 'bg-[#3a373a] text-white/80 hover:bg-[#3a373a]/80'
-                    }`}
-                  >
-                    <span className="uppercase text-[10px] text-gray-300">{lang.code}</span>
-                    <span className="truncate">{lang.nativeName || lang.name}</span>
-                  </button>
-                );
-              })}
-            </div>
+            <button
+              type="button"
+              onClick={() => setIsMobileLangOpen(!isMobileLangOpen)}
+              aria-expanded={isMobileLangOpen}
+              className="w-full text-xs uppercase font-semibold text-[#C6A15B] mb-2 flex items-center justify-between gap-1.5 focus:outline-none focus:ring-2 focus:ring-[#C6A15B] rounded-lg px-1 py-1"
+            >
+              <span className="flex items-center gap-1.5">
+                <Globe className="w-3.5 h-3.5" aria-hidden="true" />
+                <span>Language / ቋንቋ / Afaan</span>
+              </span>
+              <ChevronDown
+                className={`w-4 h-4 transition-transform duration-200 ${
+                  isMobileLangOpen ? 'rotate-180' : ''
+                }`}
+                aria-hidden="true"
+              />
+            </button>
+            {isMobileLangOpen && (
+              <div className="grid grid-cols-3 gap-2">
+                {availableLanguages.map((lang) => {
+                  const isSelected = currentLanguage === lang.code;
+                  return (
+                    <button
+                      key={lang.code}
+                      type="button"
+                      onClick={() => {
+                        setLanguage(lang.code);
+                      }}
+                      className={`flex flex-col items-center justify-center py-2 px-2 rounded-lg text-xs font-semibold transition-all ${
+                        isSelected
+                          ? 'bg-[#641E2B] text-[#C6A15B] border border-[#C6A15B]'
+                          : 'bg-[#3a373a] text-white/80 hover:bg-[#3a373a]/80'
+                      }`}
+                    >
+                      <span className="uppercase text-[10px] text-gray-300">{lang.code}</span>
+                      <span className="truncate">{lang.nativeName || lang.name}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            )}
           </div>
 
           <div className="text-center text-xs text-white/50 pt-2 border-t border-[#3a373a]">

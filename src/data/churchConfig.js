@@ -22,8 +22,8 @@ const churchConfig = {
   admin: {
     title: "Church Administrator",
     titleAmharic: "የቤተ ክርስቲያን አስተዳዳሪ",
-    name: "[Administrator name to be provided by parish office]",
-    phone: "[Official church telephone to be provided by parish office]",
+    name: "for check",
+    phone: "0943166008",
     phonePlaceholder: true,
     whatsapp: "", // Add verified WhatsApp telephone when approved
     email: "[Official church email to be provided by parish office]",
